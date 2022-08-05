@@ -1,0 +1,17 @@
+{% extends 'taskman/main.html' %}
+
+{% block content %}
+    <div class="">
+        <h1>Search</h1>
+
+        <h2>You searched for "{{task.title}}"</h2>
+
+        {% for task in tasks %}
+            <div>
+                <p>{{ task.title }}</p>
+            </div>
+        {% empty %}
+            <p>No tasks matched your query...</p>
+        {% endfor %}
+    </div>
+{% endblock %}

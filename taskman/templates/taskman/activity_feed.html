@@ -1,0 +1,10 @@
+<form>
+    <table>
+    <a href="{%url 'tasks'%}">Go back</a>
+    {%for act in activity %}
+    <tr>
+        <td>{{act.user}} {{act.action}} a task {{act.task}} on {{act.created_on}}</td>
+    </tr>
+    {%endfor%}
+    </table>
+</form>

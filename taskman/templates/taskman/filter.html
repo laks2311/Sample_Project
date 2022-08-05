@@ -1,0 +1,5 @@
+<form Action='{% url 'filter_name' %}' method= "POST" class="d-flex btn-sm" >
+    {% csrf_token %}
+      <input class="form-control me-2" type="search" placeholder="Filter by Name" name='n' aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">fILTER</button>
+    </form>  

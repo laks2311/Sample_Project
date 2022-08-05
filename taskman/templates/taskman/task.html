@@ -1,0 +1,11 @@
+<form>
+    <a href="{%url 'tasks'%}">Go back</a>
+    <h1>Task: {{task.title}}</h1>
+    {% if task.complete %}
+    <p>Status: {{'Completed'}}</p>
+    {%else%}
+    <p>Status: {{'Pending'}}</p>
+    {%endif%}
+    <p>Created At: {{task.createdAt|date:"d-m-Y"}}</p>
+    <p>Submission Date: {{task.deadlineDate|date:"d-m-Y"}}</p>
+</form>
